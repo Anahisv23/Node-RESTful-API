@@ -1,0 +1,15 @@
+// file will handle API route routing
+const http = require('http');
+const url = require('url');
+
+module.exports = http.createServer((req, res) => {
+    var userOps = require('./controller.js');
+    const reqUrl =  url.parse(req.url, true);
+
+    // Rounting is done using an if statement 
+// GET endpoint
+  if(reqUrl.pathname == '/users' && req.method === 'GET') {
+    console.log('Request type: ' + req.method + ' Endpoint: ' + req.url);
+    userOps.getUsers(req, res);
+   }
+})

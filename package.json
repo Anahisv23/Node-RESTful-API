@@ -20,5 +20,7 @@
   "devDependencies": {
     "nodemon": "^3.0.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "node": "19.8.1"
+  }
 }
